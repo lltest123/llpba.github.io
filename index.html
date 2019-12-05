@@ -1,4 +1,6 @@
 # llpba.github.io
+<html>
+    <head>
 <!-- AppsFlyer web SDK -->
 <script>
 !function(t,e,n,s,a,c,i,o,p){t.AppsFlyerSdkObject=a,t.AF=t.AF||function(){
@@ -19,29 +21,33 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","cb584168-
                 });
             });
         }  </script> 
-     </head> 
+<!--      </head> 
      <body> 
         <h1>Thank You for Signing Up!</h1> 
      </body> 
 <html>
-    <head>
+    <head> -->
         <!-- Assume that the server returns a response with details about the newly subscribed user -->
         <!-- Alternatively, you can extract data from localstorage or cookies,
             in case data was set in either of them during the subscription process
         -->
-        <script>window.onload = function(){
+<!--         <script>window.onload = function(){
             AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion',eventName: 'subscription', eventLabel: 'newsletters'});
         }
         </script>
     </head>
     <body>
         <h1>First Event for PBA Test4</h1>
-    </body>
-</html>
-<html>
-<head>
+    </body> -->
+<!-- </html>
+<html> -->
+<!-- <head> -->
     <!-- Assume that data about proudcts in the shopping cart
     is stored in localstorage -->
+        <script>window.onload = function(){
+            AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion',eventName: 'subscription', eventLabel: 'newsletters'});
+        }
+        </script>
 <script>
         window.onload = function () {
             document.getElementById('checkout').addEventListener('click', function () {
@@ -51,7 +57,9 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","cb584168-
     </script>
 </head>
 <body>
-    <h1>Shopping Cart</h1>
+        <h1>PBA Test4</h1>
+        <h1>Thank You for Signing Up!</h1> 
+    <h1>Here's Your Shopping Cart</h1>
     <h2>Shirt</h2>
     <p>
         <ul>
