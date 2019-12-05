@@ -8,20 +8,12 @@
         t.AF.id=t.AF.id||i,t.AF.plugins={},o=e.createElement(n),p=e.getElementsByTagName(n)[0],o.async=1,
         o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join(",")+"&":"")+(i.length>0?"af_id="+i:""),
         p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","cb584168-6244-4043-8634-f0b6cad0bd66")
-        window.onload = function () {
-                    var userEmail = localStorage.getItem('lior.leiba@appsflyer.com');
-                    fetch('users/' + userEmail).then(function (res) {
-                           res.text().then(function (id) {
-                            console.log(id);
-                            AF('pba', 'event', { eventType: 'IDENTIFY', customUserId: 8574111});
-                        });
-                    });
-                }  
         </script>
-<!--         <script>
+        <script>
                 // using the fetch api to send the user email to the server
                 // and get the unique user id in return	
                 window.onload = function () {
+                    document.getElementById('identify').addEventListener('click', function () {
                     var userEmail = localStorage.getItem('lior.leiba@appsflyer.com');
                     fetch('users/' + userEmail).then(function (res) {
                            res.text().then(function (id) {
@@ -29,11 +21,13 @@
                             AF('pba', 'event', { eventType: 'IDENTIFY', customUserId: 8574111});
                         });
                     });
+                    });
                 }  
-        </script>  -->
+        </script> 
         <script>
             window.onload = function(){
-            AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion',eventName: 'subscription', eventLabel: 'newsletters'});
+            document.getElementById('subscribe').addEventListener('click', function () {
+                AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion',eventName: 'subscription', eventLabel: 'newsletters'});
         }
         </script>
         <script>
@@ -64,6 +58,8 @@
                 <li>Price: $17</li>
             </ul>
         </p>
+        <button id='identify'>Identify</button>
+        <button id='subscribe'>Subscribe</button>
         <button id='checkout'>Checkout</button>
     </body>
 </html>
