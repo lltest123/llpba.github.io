@@ -13,20 +13,14 @@
                 // using the fetch api to send the user email to the server
                 // and get the unique user id in return	
                 window.onload = function () {
-                    document.getElementById('identify').addEventListener('click', function () {
-                    var userEmail = localStorage.getItem('lior.leiba@appsflyer.com');
-                    fetch('users/' + userEmail).then(function (res) {
-                           res.text().then(function (id) {
-                            console.log(id);
-                            AF('pba', 'event', { eventType: 'IDENTIFY', customUserId: id});
-                        });
-                    });
-                    });
+                    document.getElementById('identify').addEventListener('click', function () {  
+                            AF('pba', 'event', { eventType: 'IDENTIFY', customUserId: '8574111'});
+                                         });
                     document.getElementById('subscribe').addEventListener('click', function () {
-                AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion', eventName: 'subscription', eventLabel: 'newsletters'});
+                            AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion', eventName: 'subscription', eventLabel: 'newsletters'});
                  });
                     document.getElementById('checkout').addEventListener('click', function () {
-                        AF('pba', 'event', {eventType: 'EVENT',eventCategory: 'conversion', eventName: 'checkout'});
+                            AF('pba', 'event', {eventType: 'EVENT',eventCategory: 'conversion', eventName: 'checkout'});
                     });
                 }  
 //             window.onload = function() {
@@ -42,7 +36,7 @@
         </script>
     </head>
     <body>
-        <h1>PBA Test9</h1>
+        <h1>PBA Test10</h1>
         <h1>Thank You for Signing Up!</h1> 
         <h1>Here's Your Shopping Cart</h1>
         <h2>Shirt</h2>
