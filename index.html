@@ -22,25 +22,27 @@
                         });
                     });
                     });
-                }  
-        </script> 
-        <script>
-            window.onload = function() {
-            document.getElementById('subscribe').addEventListener('click', function () {
+                    document.getElementById('subscribe').addEventListener('click', function () {
                 AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion', eventName: 'subscription', eventLabel: 'newsletters'});
                  });
-            }
-        </script>
-        <script>
-                window.onload = function () {
                     document.getElementById('checkout').addEventListener('click', function () {
                         AF('pba', 'event', {eventType: 'EVENT',eventCategory: 'conversion', eventName: 'checkout'});
                     });
-                }
+                }  
+//             window.onload = function() {
+//             document.getElementById('subscribe').addEventListener('click', function () {
+//                 AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion', eventName: 'subscription', eventLabel: 'newsletters'});
+//                  });
+//             }
+//                 window.onload = function () {
+//                     document.getElementById('checkout').addEventListener('click', function () {
+//                         AF('pba', 'event', {eventType: 'EVENT',eventCategory: 'conversion', eventName: 'checkout'});
+//                     });
+//                 }
         </script>
     </head>
     <body>
-        <h1>PBA Test7</h1>
+        <h1>PBA Test8</h1>
         <h1>Thank You for Signing Up!</h1> 
         <h1>Here's Your Shopping Cart</h1>
         <h2>Shirt</h2>
