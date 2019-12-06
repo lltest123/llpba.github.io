@@ -16,8 +16,8 @@
                     document.getElementById('identify').addEventListener('click', function () {
                     var userEmail = localStorage.getItem('lior.leiba@appsflyer.com');
                     fetch('users/' + userEmail).then(function (res) {
-                           res.text().then(function (id) {
-                            console.log(id);
+                           res.text().then(function (8574111) {
+                            console.log(8574111);
                             AF('pba', 'event', { eventType: 'IDENTIFY', customUserId: 8574111});
                         });
                     });
